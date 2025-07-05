@@ -65,8 +65,6 @@ remove_docker:
 	@sudo apt update
 	@echo "\nDocker removido com sucesso!"
 
-.PHONY: help docker_install remove_docker
-
 help:
 	@echo ""
 	@echo "Usage: make [target]"
@@ -75,3 +73,5 @@ help:
 	@echo "  docker_install   Instala o Docker dentro do WSL com systemd"
 	@echo "  remove_docker    Remove completamente o Docker do sistema"
 	@echo ""
+
+.PHONY: help docker_install remove_docker

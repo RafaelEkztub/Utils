@@ -1,5 +1,3 @@
-version: '3.7'
-
 services:
   n8n:
     image: n8nio/n8n
@@ -17,10 +15,9 @@ services:
       - TZ=America/Sao_Paulo
       - GENERIC_TIMEZONE=America/Sao_Paulo
       - N8N_LOG_LEVEL=debug
-      # Usando SQLite (por padrão)
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
       - DB_TYPE=sqlite
       - DB_SQLITE_DATABASE=/home/node/.n8n/database.sqlite
-      # Armazenamento persistente
       - N8N_EDITOR_BASE_URL=http://localhost:5678
     volumes:
       - ./n8n_data:/home/node/.n8n
